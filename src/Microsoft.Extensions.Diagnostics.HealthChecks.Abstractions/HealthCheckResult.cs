@@ -21,7 +21,7 @@ namespace Microsoft.Extensions.Diagnostics.HealthChecks
         /// <param name="description">A human-readable description of the status of the component that was checked.</param>
         /// <param name="exception">An <see cref="Exception"/> representing the exception that was thrown when checking for status (if any).</param>
         /// <param name="data">Additional key-value pairs describing the health of the component.</param>
-        public HealthCheckResult(HealthStatus status, string description, Exception exception, IReadOnlyDictionary<string, object> data)
+        public HealthCheckResult(HealthStatus status, string description = null, Exception exception = null, IReadOnlyDictionary<string, object> data = null)
         {
             Status = status;
             Description = description;
