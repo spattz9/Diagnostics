@@ -21,10 +21,10 @@ namespace HealthChecksSample
         {
             if (_task.IsCompleted)
             {
-                return Task.FromResult(HealthCheckResult.Passed("Dependency is ready"));
+                return Task.FromResult(HealthCheckResult.Healthy("Dependency is ready"));
             }
 
-            return Task.FromResult(HealthCheckResult.Failed("Dependency is still initializing"));
+            return Task.FromResult(HealthCheckResult.Unhealthy("Dependency is still initializing"));
         }
     }
 }
